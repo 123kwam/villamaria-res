@@ -55,8 +55,8 @@ export function Heritage() {
             {p.lede}
           </p>
           <PanelImage
-            src="/photos/hero-grill.jpg"
-            alt="Chef tending the parrilla — meat and shrimp on the embers"
+            src="/photos/stock/panel-meat-board.jpg"
+            alt="Sliced charcoal-grilled steak on a wooden board"
           />
         </FlowSection>
 
@@ -75,8 +75,8 @@ export function Heritage() {
             </p>
             <div className="relative hidden lg:block w-[22vw] aspect-[3/4] shadow-2xl">
               <Image
-                src="/photos/bar.jpg"
-                alt="The Villa Maria bar — bottles and hanging glassware"
+                src="/photos/stock/panel-chef-hands.jpg"
+                alt="A chef's hands at work on the cutting board"
                 fill
                 sizes="22vw"
                 quality={88}
@@ -132,8 +132,8 @@ export function Heritage() {
             ))}
           </div>
           <PanelImage
-            src="/photos/food-steak-topdown.jpg"
-            alt="Charcoal-grilled steak, top-down with salad and fries"
+            src="/photos/stock/panel-steak-plated.jpg"
+            alt="A plated bone-in steak with sauce and greens"
             borderClass="border-burgundy/40"
           />
         </FlowSection>
@@ -162,8 +162,8 @@ export function Heritage() {
             ))}
           </div>
           <PanelImage
-            src="/photos/food-parrillada.jpg"
-            alt="Charcoal parrillada with grilled corn and meats"
+            src="/photos/stock/panel-ribs-bbq.jpg"
+            alt="Slow-grilled ribs on a wooden board with sauce and sides"
             borderClass="border-cream/40"
           />
         </FlowSection>
@@ -185,8 +185,8 @@ export function Heritage() {
             “The kind of place you leave reluctantly.”
           </p>
           <PanelImage
-            src="/photos/room-arches.jpg"
-            alt="The red-arch booths and cowhide seating at Villa Maria"
+            src="/photos/stock/panel-dining-warm.jpg"
+            alt="A warm, candlelit dining room"
           />
         </FlowSection>
 
@@ -216,8 +216,8 @@ export function Heritage() {
             </div>
           </div>
           <PanelImage
-            src="/photos/room-table-intimate.jpg"
-            alt="An intimate two-top at Villa Maria, set and ready"
+            src="/photos/stock/panel-restaurant-dark.jpg"
+            alt="A dark, elegant restaurant interior at dinner service"
           />
         </FlowSection>
       </FlowArt>

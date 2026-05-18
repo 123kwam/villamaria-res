@@ -38,19 +38,19 @@ export function Hero() {
           'radial-gradient(ellipse 90% 70% at 50% 100%, #A8302A 0%, #6B1A1F 35%, #3D0E11 75%, #1A0507 100%)',
       }}
     >
-      {/* hero background image — plated steak with grill marks, candle */}
+      {/* hero background image — rare steak being cut, close-up */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/photos/food-plate-candle.jpg"
-          alt="Charcoal-grilled steak plated with grilled tomato, garnish and fries"
+          src="/photos/stock/hero-steak-cut.jpg"
+          alt="A rare-grilled steak being cut, glistening with juices"
           fill
           priority
           sizes="100vw"
           quality={90}
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-burgundy-deep/40 via-burgundy-deep/10 to-burgundy-deep" />
-        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-deep/85 via-burgundy-deep/20 to-burgundy-deep/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-burgundy-deep/30 via-burgundy-deep/10 to-burgundy-deep" />
+        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-deep/85 via-burgundy-deep/15 to-burgundy-deep/40" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] flex-col justify-end px-6 pt-32 pb-20 lg:px-10 lg:pb-24">
