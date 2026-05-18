@@ -75,8 +75,8 @@ export function Heritage() {
             </p>
             <div className="relative hidden lg:block w-[22vw] aspect-[3/4] shadow-2xl">
               <Image
-                src="/photos/stock/panel-chef-hands.jpg"
-                alt="A chef's hands at work on the cutting board"
+                src="/photos/stock/panel-buenos-aires.jpg"
+                alt="The Obelisco rising over Avenida 9 de Julio in Buenos Aires"
                 fill
                 sizes="22vw"
                 quality={88}
