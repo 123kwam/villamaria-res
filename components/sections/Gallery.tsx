@@ -8,45 +8,33 @@ import { useLocale } from '@/lib/i18n/LocaleProvider';
 
 const IMAGES = [
   {
-    src: 'https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1600&q=80',
-    alt: 'Steak on the grill',
+    src: '/photos/food-tenderloin.jpg',
+    alt: 'Tenderloin plated in low light',
     span: 'md:col-span-2 md:row-span-2',
   },
+  { src: '/photos/bar.jpg', alt: 'The bar — hanging glassware and bottles', span: '' },
+  { src: '/photos/food-parrillada.jpg', alt: 'Parrillada with grilled corn for two', span: '' },
   {
-    src: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Sliced ribeye plated',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Restaurant interior',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Dining room at night',
+    src: '/photos/room-long.jpg',
+    alt: 'Long view of the dining room and bar',
     span: 'md:col-span-2',
   },
+  { src: '/photos/wine-wall.jpg', alt: 'Villa Maria wine wall display', span: '' },
+  { src: '/photos/food-skewer.jpg', alt: 'Beef skewer with charred peppers and onion', span: '' },
   {
-    src: 'https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Wine glass',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Wine bottles',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=80',
-    alt: 'Grill fire close-up',
+    src: '/photos/room-arches.jpg',
+    alt: 'Red arches, cowhide booths, the bar beyond',
     span: 'md:col-span-2',
   },
+  { src: '/photos/food-fish.jpg', alt: 'Grilled fish plated with garnish', span: '' },
+  { src: '/photos/food-surf-turf.jpg', alt: 'Surf and turf — steak with grilled prawns', span: '' },
   {
-    src: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Bar service',
-    span: '',
+    src: '/photos/room-canal-art.jpg',
+    alt: 'Dining room with Amsterdam canal photograph',
+    span: 'md:col-span-2',
   },
+  { src: '/photos/food-dessert.jpg', alt: 'Dessert plate with dulce-de-leche flan', span: '' },
+  { src: '/photos/room-cowhide.jpg', alt: 'Cowhide booths beneath warm pendant lamps', span: '' },
 ];
 
 export function Gallery() {
@@ -122,10 +110,11 @@ export function Gallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={IMAGES[lightbox].src.replace('w=1200', 'w=2000').replace('w=1600', 'w=2400')}
+                src={IMAGES[lightbox].src}
                 alt={IMAGES[lightbox].alt}
                 fill
                 sizes="80vw"
+                quality={90}
                 className="object-contain"
               />
               <p className="absolute bottom-[-2.5rem] left-0 text-xs uppercase tracking-[0.32em] text-cream/70">

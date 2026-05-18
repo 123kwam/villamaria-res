@@ -53,13 +53,14 @@ export function Reserve() {
           </p>
           <div className="relative aspect-[4/5] max-w-md overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
-              alt="Villa Maria dining room"
+              src="/photos/room-table-intimate.jpg"
+              alt="An intimate table for two at Villa Maria"
               fill
               sizes="(min-width: 1024px) 30vw, 100vw"
+              quality={88}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/80 via-burgundy-deep/20 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <p className="font-display italic text-cream text-2xl leading-snug">
                 Bring people you love.

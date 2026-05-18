@@ -38,18 +38,19 @@ export function Hero() {
           'radial-gradient(ellipse 90% 70% at 50% 100%, #A8302A 0%, #6B1A1F 35%, #3D0E11 75%, #1A0507 100%)',
       }}
     >
-      {/* hero background image */}
+      {/* hero background image — chef's tongs on the parrilla */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=2400&q=80"
-          alt=""
+          src="/photos/hero-grill.jpg"
+          alt="Chef tending the parrilla — steak, ribs and shrimp over the embers"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-30 mix-blend-overlay"
+          quality={90}
+          className="object-cover object-center opacity-55"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-burgundy-deep/40 via-transparent to-burgundy-deep" />
-        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-deep/70 via-transparent to-burgundy-deep/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-burgundy-deep/55 via-burgundy-deep/30 to-burgundy-deep" />
+        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-deep/75 via-transparent to-burgundy-deep/40" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] flex-col justify-end px-6 pt-32 pb-20 lg:px-10 lg:pb-24">

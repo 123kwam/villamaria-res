@@ -48,11 +48,12 @@ export function Events() {
           className="relative aspect-[4/5] max-w-lg ml-auto"
         >
           <Image
-            src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1400&q=80"
-            alt="Private dining room"
+            src="/photos/room-long.jpg"
+            alt="The long dining room and bar — Villa Maria private buy-out capacity"
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover"
+            quality={88}
+            className="object-cover object-center"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-burgundy-deep/80 to-transparent p-8">
             <p className="font-display italic text-cream text-2xl">“The back room is where the year’s best dinners happen.”</p>

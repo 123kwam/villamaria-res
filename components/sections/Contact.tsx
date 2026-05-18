@@ -1,6 +1,7 @@
 'use client';
 
-import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Instagram, ArrowUpRight } from 'lucide-react';
 import { useLocale } from '@/lib/i18n/LocaleProvider';
 
 export function Contact() {
@@ -65,21 +66,35 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px] border border-gold/20 overflow-hidden">
-            <iframe
-              title="Villa Maria location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=4.8780%2C52.3625%2C4.8845%2C52.3660&layer=mapnik&marker=52.3640%2C4.8813"
-              className="absolute inset-0 w-full h-full"
-              style={{ filter: 'invert(0.92) hue-rotate(180deg) saturate(0.7)' }}
-              loading="lazy"
+          {/* Exterior + wayfinding card */}
+          <a
+            href="https://www.google.com/maps/place/Lange+Leidsedwarsstraat+45,+1017+NG+Amsterdam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px] border border-gold/20 overflow-hidden block"
+            aria-label="Open Villa Maria on Google Maps"
+          >
+            <Image
+              src="/photos/exterior-facade.jpg"
+              alt="Villa Maria facade on Lange Leidsedwarsstraat — number 45, terrace tables outside"
+              fill
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              quality={90}
+              className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 pointer-events-none border-2 border-burgundy-deep/30" />
-            <div className="absolute bottom-6 left-6 right-6 bg-burgundy-deep/95 backdrop-blur-sm border border-gold/20 p-5 z-10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-2">Lange Leidsedwarsstraat 45</p>
-              <p className="font-display text-cream text-xl italic">A short walk from Leidseplein.</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep/85 via-burgundy-deep/15 to-burgundy-deep/30" />
+            <div className="absolute top-6 right-6 inline-flex items-center gap-2 bg-gold/95 text-burgundy-deep px-3 py-2 text-[10px] uppercase tracking-[0.28em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Open in maps <ArrowUpRight size={14} />
             </div>
-          </div>
+            <div className="absolute bottom-6 left-6 right-6 bg-burgundy-deep/95 backdrop-blur-sm border border-gold/20 p-5 z-10">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-2">
+                Lange Leidsedwarsstraat 45
+              </p>
+              <p className="font-display text-cream text-xl italic">
+                A short walk from Leidseplein.
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
