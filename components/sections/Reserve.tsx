@@ -8,7 +8,6 @@ import { useLocale } from '@/lib/i18n/LocaleProvider';
 import { Button } from '@/components/ui/Button';
 
 const TIMES = ['18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'];
-const PARTY = [2, 3, 4, 5, 6];
 
 export function Reserve() {
   const { t } = useLocale();
@@ -105,13 +104,17 @@ export function Reserve() {
                     </select>
                   </FieldWrap>
                   <FieldWrap label={labels.guests} icon={<Users size={14} />}>
-                    <select required value={form.guests} onChange={update('guests')} className="vm-input">
-                      {PARTY.map((n) => (
-                        <option key={n} value={n}>
-                          {n}
-                        </option>
-                      ))}
-                    </select>
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min={1}
+                      step={1}
+                      required
+                      value={form.guests}
+                      onChange={update('guests')}
+                      placeholder="e.g. 2"
+                      className="vm-input"
+                    />
                   </FieldWrap>
                 </div>
 
