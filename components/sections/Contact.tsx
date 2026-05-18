@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
 import { useLocale } from '@/lib/i18n/LocaleProvider';
 
 export function Contact() {
@@ -24,6 +24,7 @@ export function Contact() {
               icon={<MapPin size={18} className="text-gold" />}
               label="Address"
               lines={t.contact.address.split('\n')}
+              href="https://www.google.com/maps/place/Lange+Leidsedwarsstraat+45,+1017+NG+Amsterdam"
             />
             <Block
               icon={<Phone size={18} className="text-gold" />}
@@ -52,22 +53,14 @@ export function Contact() {
 
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://instagram.com"
+                href={t.contact.instagram}
                 target="_blank"
-                rel="noopener"
-                className="w-11 h-11 inline-flex items-center justify-center border border-cream/20 hover:border-gold hover:text-gold transition-colors text-cream/70"
-                aria-label="Instagram"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 border border-cream/20 px-4 h-11 hover:border-gold hover:text-gold transition-colors text-cream/70 text-xs uppercase tracking-[0.28em]"
+                aria-label="Follow Villa Maria on Instagram"
               >
                 <Instagram size={16} />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener"
-                className="w-11 h-11 inline-flex items-center justify-center border border-cream/20 hover:border-gold hover:text-gold transition-colors text-cream/70"
-                aria-label="Facebook"
-              >
-                <Facebook size={16} />
+                <span>villa.maria.steakhouse</span>
               </a>
             </div>
           </div>
@@ -76,15 +69,15 @@ export function Contact() {
           <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px] border border-gold/20 overflow-hidden">
             <iframe
               title="Villa Maria location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=4.882%2C52.367%2C4.892%2C52.373&layer=mapnik&marker=52.370%2C4.887"
-              className="absolute inset-0 w-full h-full grayscale-[0.6] contrast-90"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=4.8780%2C52.3625%2C4.8845%2C52.3660&layer=mapnik&marker=52.3640%2C4.8813"
+              className="absolute inset-0 w-full h-full"
               style={{ filter: 'invert(0.92) hue-rotate(180deg) saturate(0.7)' }}
               loading="lazy"
             />
             <div className="absolute inset-0 pointer-events-none border-2 border-burgundy-deep/30" />
             <div className="absolute bottom-6 left-6 right-6 bg-burgundy-deep/95 backdrop-blur-sm border border-gold/20 p-5 z-10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-2">Prinsengracht</p>
-              <p className="font-display text-cream text-xl italic">A short walk from Westerkerk.</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-2">Lange Leidsedwarsstraat 45</p>
+              <p className="font-display text-cream text-xl italic">A short walk from Leidseplein.</p>
             </div>
           </div>
         </div>
@@ -104,6 +97,16 @@ function Block({
   lines: string[];
   href?: string;
 }) {
+  const content = (
+    <p className="text-cream font-light text-lg lg:text-xl leading-snug">
+      {lines.map((l) => (
+        <span key={l} className="block">
+          {l}
+        </span>
+      ))}
+    </p>
+  );
+
   return (
     <div>
       <div className="flex items-center gap-3 mb-3">
@@ -111,24 +114,11 @@ function Block({
         <span className="text-[10px] uppercase tracking-[0.32em] text-gold">{label}</span>
       </div>
       {href ? (
-        <a
-          href={href}
-          className="text-cream font-light text-lg lg:text-xl leading-snug hover:text-gold transition-colors"
-        >
-          {lines.map((l) => (
-            <span key={l} className="block">
-              {l}
-            </span>
-          ))}
+        <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined} className="hover:text-gold transition-colors block">
+          {content}
         </a>
       ) : (
-        <p className="text-cream font-light text-lg lg:text-xl leading-snug">
-          {lines.map((l) => (
-            <span key={l} className="block">
-              {l}
-            </span>
-          ))}
-        </p>
+        content
       )}
     </div>
   );

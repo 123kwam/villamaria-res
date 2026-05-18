@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/sections/Navbar';
 import { Hero } from '@/components/sections/Hero';
 import { Heritage } from '@/components/sections/Heritage';
+import { Awards } from '@/components/sections/Awards';
 import { Menu } from '@/components/sections/Menu';
 import { Gallery } from '@/components/sections/Gallery';
 import { Reviews } from '@/components/sections/Reviews';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <Awards />
         <Heritage />
         <Menu />
         <Gallery />

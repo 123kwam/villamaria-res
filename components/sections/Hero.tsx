@@ -87,7 +87,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-end"
         >
-          <h2 className="font-display italic text-cream text-3xl sm:text-4xl lg:text-5xl leading-[1.1] max-w-xl">
+          <h2 className="font-display italic text-cream text-3xl sm:text-4xl lg:text-5xl leading-[1.1] max-w-xl whitespace-pre-line">
             {t.hero.title}
           </h2>
           <div className="max-w-md">
